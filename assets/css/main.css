@@ -1326,69 +1326,81 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Service Details Section
+# Education Section Styling
 --------------------------------------------------------------*/
-.service-details .services-list {
-  padding: 10px 30px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  margin-bottom: 20px;
-}
 
-.service-details .services-list a {
-  display: block;
-  line-height: 1;
-  padding: 8px 0 8px 15px;
-  border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
-  margin: 20px 0;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
-  border-color: var(--accent-color);
-}
-
-.service-details .services-list a:hover {
-  border-color: var(--accent-color);
-}
-
-.service-details .services-img {
-  margin-bottom: 20px;
-}
-
-.service-details h3 {
-  font-size: 26px;
-  font-weight: 700;
-}
-
-.service-details h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.service-details p {
-  font-size: 15px;
-}
-
-.service-details ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.service-details ul li {
-  padding: 5px 0;
+.education-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.service-details ul i {
-  font-size: 20px;
-  margin-right: 8px;
-  color: var(--accent-color);
+.education-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+  padding: 20px 0;
 }
+
+.education .icon {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+}
+
+.education .icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.education-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.education-text h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.education-text h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.education-text p {
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .education-item {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .education .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .education-text {
+    min-width: unset;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Starter Section Section
