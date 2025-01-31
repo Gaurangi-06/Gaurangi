@@ -1161,7 +1161,16 @@ section,
   color: #007bff; /* Blue link color */
 }
 
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+  }
 
+  .certification-text a {
+    font-size: 14px; /* Reduce text size for better fit */
+    text-align: center; /* Center align the text */
+  }
+}
 
 /*--------------------------------------------------------------
 # Contact Section
