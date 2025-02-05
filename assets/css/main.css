@@ -361,6 +361,18 @@ h6 {
   background-color: rgba(33, 37, 41, 0.03);
 }
 
+@media (max-width: 991px) {  /* Adjust breakpoint as needed */
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -718,10 +730,10 @@ section,
   background-color: var(--accent-color);
 }
 
-.skills-section {
+/* .skills-section {
   text-align: center;
-  padding: 50px 0;
-}
+  padding: 20px 0;
+} */
 
 /* Skill Item */
 .skills-item {
@@ -745,8 +757,8 @@ section,
 }
 
 .skills-img {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   object-fit: contain; /* Ensures full image is visible inside the circle */
 }
 
