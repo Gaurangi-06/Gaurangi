@@ -370,6 +370,7 @@ h6 {
     font-size: 28px;
     cursor: pointer;
     z-index: 1000;
+    color: var(--nav-color); 
   }
 }
 
