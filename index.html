@@ -292,6 +292,20 @@
                 <h3>SSMS</h3>
             </div>
           </div>
+
+          <div class="col-md-1">
+            <div class="skills-item">
+                <img src="assets/img/skills/Zapier.png" class="skills-img" alt="aws">
+                <h3>Zapier</h3>
+            </div>
+          </div>
+
+          <div class="col-md-1">
+            <div class="skills-item">
+                <img src="assets/img/skills/Azure.png" class="skills-img" alt="aws">
+                <h3>Microsoft Azure</h3>
+            </div>
+          </div>
       
         </div> <!-- End of Second Row -->
       </div>         
@@ -523,6 +537,16 @@
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/cloudmart.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <p>CloudMart - MultiCloud DevOps & AI-Driven E-Commerce Platform</p>
+                  <a href="cloudmart.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
               <div class="portfolio-content h-100">
@@ -847,6 +871,41 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const resumeItems = document.querySelectorAll('.resume-item');
+      
+      function highlightResumeItem() {
+        const triggerBottom = window.innerHeight * 0.8;
+        let mostVisibleItem = null;
+        let maxVisibility = 0;
+        
+        resumeItems.forEach(item => {
+          const rect = item.getBoundingClientRect();
+          const visibility = Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
+          
+          if (visibility > maxVisibility && visibility > 0) {
+            maxVisibility = visibility;
+            mostVisibleItem = item;
+          }
+        });
+
+        // Remove active class from all items
+        resumeItems.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Add active class only to the most visible item
+        if (mostVisibleItem) {
+          mostVisibleItem.classList.add('active');
+        }
+      }
+
+      window.addEventListener('scroll', highlightResumeItem);
+      highlightResumeItem(); // Call once on load
+    });
+  </script>
 
 </body>
 
