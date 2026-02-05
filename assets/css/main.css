@@ -12,29 +12,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #272829;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #a8a9b4;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -361,7 +373,9 @@ h6 {
   background-color: rgba(33, 37, 41, 0.03);
 }
 
-@media (max-width: 991px) {  /* Adjust breakpoint as needed */
+@media (max-width: 991px) {
+
+  /* Adjust breakpoint as needed */
   .mobile-nav-toggle {
     display: block;
     position: absolute;
@@ -370,7 +384,7 @@ h6 {
     font-size: 28px;
     cursor: pointer;
     z-index: 1000;
-    color: var(--nav-color); 
+    color: var(--nav-color);
   }
 }
 
@@ -744,23 +758,27 @@ section,
 
 /* Circular Frame for Icons */
 .skills-img-wrap {
-  width: 100px;  
+  width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white; /* Ensure visibility */
-  border: 4px solid var(--accent-color); /* White border with accent outline */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Soft shadow like testimonials */
+  background-color: white;
+  /* Ensure visibility */
+  border: 4px solid var(--accent-color);
+  /* White border with accent outline */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  /* Soft shadow like testimonials */
   margin: 0 auto 10px auto;
 }
 
 .skills-img {
   width: 70px;
   height: 70px;
-  object-fit: contain; /* Ensures full image is visible inside the circle */
+  object-fit: contain;
+  /* Ensures full image is visible inside the circle */
 }
 
 .skills-item h3 {
@@ -851,7 +869,7 @@ section,
 
 @media (min-width: 768px) {
   .resume .resume-item {
-    margin-left: 4px; 
+    margin-left: 4px;
   }
 }
 
@@ -907,8 +925,10 @@ section,
   transition: 0.3s;
   width: 100%;
   height: 250px;
-  object-fit: cover; /* Ensures the image covers the area without stretching or distorting */
-  object-position: center; /* Centers the image if it's cropped */
+  object-fit: cover;
+  /* Ensures the image covers the area without stretching or distorting */
+  object-position: center;
+  /* Centers the image if it's cropped */
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -1128,44 +1148,57 @@ section,
 
 .certification-title {
   display: flex;
-  align-items: center; /* Ensures proper vertical alignment */
-  gap: 15px; /* Adjusted spacing between image and text */
+  align-items: center;
+  /* Ensures proper vertical alignment */
+  gap: 15px;
+  /* Adjusted spacing between image and text */
   padding-bottom: 20px;
 }
 
 .certification-title img {
-  height: 50px; /* Adjust as needed */
+  height: 50px;
+  /* Adjust as needed */
   width: 100px;
 }
 
 .certification-title h4 {
   font-size: 25px;
   font-weight: 600;
-  margin: 0; /* Removed extra margins */
+  margin: 0;
+  /* Removed extra margins */
   padding: 0;
-  line-height: 1.2; /* Improves text readability */
+  line-height: 1.2;
+  /* Improves text readability */
 }
+
 .certification-text {
   display: flex;
-  flex-direction: column; /* Ensures h4 and p are stacked */
+  flex-direction: column;
+  /* Ensures h4 and p are stacked */
 }
 
 .microsft {
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* Adjust the spacing between text and icon */
-  text-decoration: none; /* Optional: Removes underline */
+  gap: 6px;
+  /* Adjust the spacing between text and icon */
+  text-decoration: none;
+  /* Optional: Removes underline */
 }
 
 .microsft i {
-  font-size: 1rem; /* Adjust size of the link icon */
-  margin-left: 5px; /* Space after text */
+  font-size: 1rem;
+  /* Adjust size of the link icon */
+  margin-left: 5px;
+  /* Space after text */
 }
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Space between items */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
+  gap: 20px;
+  /* Space between items */
   margin-top: 10px;
 }
 
@@ -1180,17 +1213,21 @@ section,
 
 .certification-text i {
   font-size: 1.2rem;
-  color: #007bff; /* Blue link color */
+  color: #007bff;
+  /* Blue link color */
 }
 
 @media (max-width: 768px) {
   .certifications-grid {
-    grid-template-columns: repeat(1, 1fr); /* Single column on smaller screens */
+    grid-template-columns: repeat(1, 1fr);
+    /* Single column on smaller screens */
   }
 
   .certification-text a {
-    font-size: 14px; /* Reduce text size for better fit */
-    text-align: center; /* Center align the text */
+    font-size: 14px;
+    /* Reduce text size for better fit */
+    text-align: center;
+    /* Center align the text */
   }
 }
 
@@ -1438,4 +1475,46 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Centered Resume Timeline (Desktop)
+--------------------------------------------------------------*/
+@media (min-width: 992px) {
+  div.resume {
+    position: relative;
+  }
+
+  /* Central Line */
+  div.resume::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: var(--accent-color);
+    transform: translateX(-50%);
+  }
+
+  /* Reset Item Styles form Default Left Border */
+  .resume .resume-item {
+    border-left: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  /* Center the Dot */
+  .resume .resume-item::before {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5px;
+    /* Align with the top text */
+  }
+
+  /* Keep the Dot Centered When Active/Highlighted */
+  .resume .resume-item.active::before {
+    transform: translateX(-50%) scale(1.2);
+  }
 }
